@@ -1,11 +1,13 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom/dist";
 
-import "./globals.css";
-import LoginForm from "./_auth/forms/LoginForm";
-import RegisterForm from "./_auth/forms/RegisterForm";
 import { Home } from "./_root/pages";
+
 import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
+import LoginForm from "./_auth/forms/LoginForm";
+import RegisterForm from "./_auth/forms/RegisterForm";
+
+import "./globals.css";
 
 const App = () => {
   return (
@@ -13,7 +15,7 @@ const App = () => {
       <Routes>
         <Route element={<AuthLayout />}>
           <Route path="/login" element={<LoginForm />} />
-          <Route path="/login" element={<RegisterForm />} />
+          <Route path="/register" element={<RegisterForm />} />
         </Route>
 
         <Route element={<RootLayout />}>
