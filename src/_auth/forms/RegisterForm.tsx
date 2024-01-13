@@ -32,7 +32,7 @@ const RegisterForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof RegisterValidation>) {
-    const newUser = await createUserAccoutn(values);
+    //onst newUser = await createUserAccoutn(values);
     console.log(values);
   }
 
