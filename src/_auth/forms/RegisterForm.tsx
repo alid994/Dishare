@@ -3,7 +3,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
   FormLabel,
@@ -17,6 +16,7 @@ import { RegisterValidation } from "@/lib/validation";
 import { z } from "zod";
 import Loader from "@/components/ui/shared/Loader";
 import { Link } from "react-router-dom";
+import { createUserAccount } from "@/lib/appwrite/api";
 
 const RegisterForm = () => {
   const isLoading = true;
@@ -32,8 +32,8 @@ const RegisterForm = () => {
   });
 
   async function onSubmit(values: z.infer<typeof RegisterValidation>) {
-    //onst newUser = await createUserAccoutn(values);
-    console.log(values);
+    const newUser = await createUserAccount(values);
+    console.log(newUser);
   }
 
   return (
