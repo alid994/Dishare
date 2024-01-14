@@ -24,7 +24,6 @@ const RegisterForm = () => {
     resolver: zodResolver(RegisterValidation),
     defaultValues: {
       name: "",
-      surname: "",
       username: "",
       email: "",
       password: "",
@@ -59,19 +58,6 @@ const RegisterForm = () => {
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Name</FormLabel>
-                <FormControl>
-                  <Input type="text" className="shad-input" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-          <FormField
-            control={form.control}
-            name="surname"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Surame</FormLabel>
                 <FormControl>
                   <Input type="text" className="shad-input" {...field} />
                 </FormControl>

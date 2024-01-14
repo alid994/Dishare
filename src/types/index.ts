@@ -44,7 +44,6 @@ export type IUser = {
 
 export type INewUser = {
   name: string;
-  surname: string;
   email: string;
   username: string;
   password: string;
