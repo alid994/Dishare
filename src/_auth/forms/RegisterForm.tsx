@@ -20,7 +20,7 @@ import {
   useCreateUserAccount,
   useLoginAccount,
 } from "@/lib/react-query/queriesAndMutations";
-import { SignupValidation } from "@/lib/validation";
+import { RegisterValidation } from "@/lib/validation";
 import { useUserContext } from "@/context/AuthContext";
 
 const RegisterForm = () => {
@@ -28,8 +28,8 @@ const RegisterForm = () => {
   const navigate = useNavigate();
   const { checkAuthUser, isLoading: isUserLoading } = useUserContext();
 
-  const form = useForm<z.infer<typeof SignupValidation>>({
-    resolver: zodResolver(SignupValidation),
+  const form = useForm<z.infer<typeof RegisterValidation>>({
+    resolver: zodResolver(RegisterValidation),
     defaultValues: {
       name: "",
       surname: "",
@@ -46,7 +46,7 @@ const RegisterForm = () => {
     useLoginAccount();
 
   // Handler
-  const handleSignup = async (user: z.infer<typeof SignupValidation>) => {
+  const handleSignup = async (user: z.infer<typeof RegisterValidation>) => {
     try {
       const newUser = await createUserAccount(user);
 
