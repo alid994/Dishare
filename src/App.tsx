@@ -6,6 +6,7 @@ import AuthLayout from "./_auth/AuthLayout";
 import RootLayout from "./_root/RootLayout";
 import LoginForm from "./_auth/forms/LoginForm";
 import RegisterForm from "./_auth/forms/RegisterForm";
+import { Toaster } from "./components/ui/toaster";
 
 import "./globals.css";
 
@@ -22,6 +23,8 @@ const App = () => {
           <Route index element={<Home />} />
         </Route>
       </Routes>
+
+      <Toaster />
     </main>
   );
 };

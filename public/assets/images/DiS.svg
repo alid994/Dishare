@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="80" viewBox="0 0 200 80">
+  <!-- Box with DiS -->
+  <rect x="10" y="10" width="40" height="40" fill="#3498db"/>
+  <text x="20" y="35" font-family="Arial" font-size="20" fill="#fff">DiS</text>
+  
+  <!-- Text "dishare" -->
+  <text x="60" y="40" font-family="Arial" font-size="20" fill="#333">dishare</text>
+</svg>
