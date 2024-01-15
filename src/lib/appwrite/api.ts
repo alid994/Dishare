@@ -97,3 +97,13 @@ export async function getCurrentUser() {
     return null;
   }
 }
+
+export async function logOutAccount() {
+  try {
+    const session = await account.deleteSession("current");
+
+    return session;
+  } catch (error) {
+    console.log(error);
+  }
+}
