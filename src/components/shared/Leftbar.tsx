@@ -7,7 +7,7 @@ import { sidebarLinks } from "@/constants";
 import { INavLink } from "@/types";
 
 const Leftbar = () => {
-  const pathname = useLocation();
+  const { pathname } = useLocation();
   const { mutate: logOut, isSuccess } = useLogOutAccount();
   const navigate = useNavigate();
   const { user } = useUserContext();
